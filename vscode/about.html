@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About</title>
+
+    <style type="text/css">
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ),
+                url("enhanced.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 70%;
+            max-width: 1200px;
+            padding-top: 45px;
+        }
+
+        .about-title {
+            position: absolute;
+            top: -160px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 320px;
+            z-index: 2;
+            filter: drop-shadow(
+                6px 8px 6px rgba(0, 0, 0, 0.7)
+            );
+
+            animation: aboutEnter 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+        }
+
+        @keyframes aboutEnter {
+            0% {
+                transform: translate(-50%, -100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translate(-50%, 0);
+                opacity: 1;
+            }
+
+        }
+
+
+        .textbox {
+            width: 100%;
+            padding: 75px 80px;
+            background: rgba(255, 255, 255, 0.123);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 45px;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            box-shadow:
+                0 0 20px rgba(0, 0, 0, 0.4),
+                inset 0 0 20px rgba(255, 255, 255, 0.3);
+
+            color: #ffffff;
+            text-align: center;
+            line-height: 1.7;
+            font-size: 22px;
+            font-weight: 500;
+            opacity: 0;
+            animation: textboxEnter 1s cubic-bezier(0.25, 0.1, 0.25, 1)  forwards;
+        }
+
+
+        @keyframes textboxEnter {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+        }
+
+        .spiderman {
+            position: fixed;
+            left: 10px;
+            bottom: -10px;
+            width: 460px;
+            z-index: 5;
+            animation:
+                spidermanEnter
+                1.5s
+                cubic-bezier(0.25, 0.1, 0.25, 1)
+                forwards;
+            filter: drop-shadow(
+                8px 8px 8px rgba(0, 0, 0, 0.6)
+            );
+        }
+
+        @keyframes spidermanEnter {
+            0% {
+                transform: translate(-100px, 30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translate(100px, 0);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <img
+            src="about.png"
+            class="about-title"
+            alt="About"
+        >
+
+        <div class="textbox">
+
+            Spider-Man: Across the Spider-Verse (2023) catapults Brooklyn’s teenage hero Miles Morales into the Multiverse, where he reunites with Gwen Stacy and encounters the Spider-Society—a coalition of Spider-Heroes dedicated to protecting existence.
+
+            <br><br>
+
+            When a tragic conflict over fixed "canon events" forces Miles to choose between saving someone he loves and saving every universe, he rebels against Spider-Man 2099 to forge his own destiny.
+
+            <br><br>
+
+            Pushing animation boundaries with visually distinct art styles for every dimension, the film delivers a high-octane, deeply emotional story about agency, family, and what it truly takes to be a hero.
+
+        </div>
+
+    </div>
+
+    <img
+        src="spiderman.png"
+        class="spiderman"
+        alt="Spider-Man"
+    >
+
+
+</body>
+
+</html>
