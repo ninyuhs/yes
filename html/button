@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hover Button Practice</title>
+  <style>
+    /* Centers the button on the screen */
+    body {
+      text-align: center;
+      padding-top: 100px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* 1. INITIAL BUTTON STYLE (Normal State) */
+    .my-button {
+      background-color: green; /* 1st property: Background color */
+      color: white;             /* Text color */
+      font-size: 20px;          /* 2nd property: Font size */
+      padding: 15px 30px;       /* Spacing inside the button */
+      border: none;             /* Removes default button border */
+      border-radius: 10px;      /* Rounds the corners */
+      cursor: pointer;          /* Shows a hand icon when hovering */
+
+      /* 3. ADD TRANSITION: Tells CSS to smoothly animate changes over 0.5 seconds */
+      transition: all 0.5s ease;
+    }
+
+    /* 4. HOVER STATE: What changes when you put your mouse over the button */
+    .my-button:hover {
+      background-color: darkgreen; /* Change 1: Color gets darker */
+      font-size: 24px;             /* Change 2: Text gets bigger */
+      border-radius: 25px;         /* Change 3: Corners get more rounded */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- The Button Element -->
+  <button class="my-button">Hover Me!</button>
+
+</body>
+</html>
